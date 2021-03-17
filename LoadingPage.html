@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">   
+        function Redirect() 
+        {  
+            window.location="Home.html"; 
+        }
+        setTimeout('Redirect()', 5000);   
+    </script>
+    <div class="load">
+        <div style="color: #fff; font-size: 25px; font-weight: 700; font-family: 'SF Pro Text','Myriad Set Pro','SF Pro Icons','Helvetica Neue','Helvetica','Arial',sans-serif;">You will be redirected to a new page in 5 seconds</div>
+        <svg>
+            <path></path>
+        </svg>
+        <svg>
+            <path></path>
+        </svg>
+        <style>
+            body{
+                background-color: #000;
+            }
+            .load{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #000;
+                position: relative;
+                bottom: 80px;
+            }
+            .load div{
+                position: relative;
+                top: 150px;
+            }
+            svg{
+                position: absolute;
+                width: 400px;
+                fill: none;
+            }
+            svg:nth-child(2){
+                filter: blur(40px);
+            }
+            svg path{
+                d:path("M0,25 C150,110 150, -60 300,25");
+                stroke: #ff0092;
+                stroke-width: 50;
+                stroke-linecap: round;
+                transform: translate(50px,50%);
+                animation: animate 2s ease-in-out infinite;
+            }
+            @keyframes animate{
+                0%{
+                    stroke: #ff0092;
+                    d:path("M0,25 C150,110 150, -60 300,25");
+                }
+                50%{
+                    stroke: #00ff00;
+                    d:path("M0,25 C160,-50 140,110 300,25");
+                } 
+            }
+        </style>
+    </div>
+</body>
+</html>
