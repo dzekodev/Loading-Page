@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" data-text="Home">Home</a></li>
+            <li><a href="#" data-text="About">About</a></li>
+            <li><a href="#" data-text="Portfolio">Portfolio</a></li>
+            <li><a href="#" data-text="Contact">Contact</a></li>
+        </ul>
+        <style>
+            body{
+                margin: 0;
+                padding:0;
+            }
+            nav{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-color: rgba(2, 0, 0, 0.836);
+            }
+            nav ul{
+                display:flex;
+                flex-direction: row;
+            }
+            nav ul li{
+                width: 350px;
+                list-style: none;
+            }
+            nav ul li a{
+                position: relative;
+                text-decoration: none;
+                color: transparent;
+                font-size: 30px;
+                font-weight: 900;
+                -webkit-text-stroke: 1px #fff;
+                color: rgb(0, 0, 0);
+                font-size: 50px;
+                line-height: 1.7em;
+                transition:all 0.5s ease-in-out;
+                font-family: 'Hanalei', cursive;
+            }
+            nav ul li a:hover{
+                color: #fff;
+                -webkit-text-stroke: 1px #000;
+            }
+            nav ul li a::before {
+                content: attr(data-text);
+                position: absolute;
+                color: rgb(255, 255, 255);
+                top: 0;
+                transition: 0.5s;
+            }
+            ul li a:hover::before{
+                color: rgb(200, 0, 0);
+                z-index: 1;
+                -webkit-text-stroke: 1px #000;
+                transform: translate(1px,-1px);
+            }
+            
+        </style>
+    </nav>
+</body>
+</html>
